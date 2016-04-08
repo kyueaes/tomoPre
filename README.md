@@ -1,3 +1,3 @@
 # tomoPre
 
-preprocessing python function before tomo reconstruction
+Preprocessing python function before tomo reconstruction
