@@ -1,4 +1,4 @@
-# tomoPre
+tomoPre
 #
 Preprocessing python function before tomo reconstruction
 
@@ -9,6 +9,7 @@ The first way is to define the parameters in Stitching_InitConv_TIFFtoHDF4_singl
 The function are:
 
 prefInitSinglePy()
+
 prefInitPy()
 
 The second way is to use the matlab file under matlab folder to generate a test.mat file, and use python to readin all the parameters.
