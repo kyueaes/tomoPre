@@ -12,7 +12,7 @@ The first way is to define the parameters in Stitching_InitConv_TIFFtoHDF4_singl
 
 The function are:
 
-prefInitSinglePy()
+* prefInitSinglePy()
 
 prefInitPy()
 
