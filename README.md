@@ -1,10 +1,12 @@
 tomoPre
 ============
 
+Preprocessing python function before tomo reconstruction
+
 Features
 ============
 
-Preprocessing python function before tomo reconstruction
+
 
 For this script, there are two ways to define prefers parameters. 
 
