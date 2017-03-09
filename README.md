@@ -1,5 +1,9 @@
 tomoPre
 #
+
+Features
+============
+
 Preprocessing python function before tomo reconstruction
 
 For this script, there are two ways to define prefers parameters. 
@@ -22,5 +26,6 @@ The function used for reading the data from the image file:
 
 dataPrepare(prefs)
 
-
+Usage
+============
 rec_1ID_example.py is example script for using the preprocessing function with tomopy.
