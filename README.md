@@ -30,4 +30,5 @@ The function used for reading the data from the image file:
 
 Usage
 ============
-rec_1ID_example.py is example script for using the preprocessing function with tomopy.
+* Modify the prefs['filePath'] in Stitching_InitConv_TIFFtoHDF4_single.py and Stitching_InitConv_TIFFtoHDF4.py to point to your image path as the input
+* rec_1ID_example.py is example script for using the preprocessing function with tomopy.
