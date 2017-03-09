@@ -32,3 +32,4 @@ Usage
 ============
 * Modify the prefs['filePath'] in Stitching_InitConv_TIFFtoHDF4_single.py and Stitching_InitConv_TIFFtoHDF4.py to point to your image path as the input
 * rec_1ID_example.py is example script for using the preprocessing function with tomopy.
+* In rec_1ID_example.py, set the result path using function write_tiff_stack().
