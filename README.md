@@ -14,17 +14,17 @@ The function are:
 
 * prefInitSinglePy()
 
-prefInitPy()
+* prefInitPy()
 
 The second way is to use the matlab file under matlab folder to generate a test.mat file, and use python to readin all the parameters.
 
 The function is:
 
-prefInitMatlab()
+* prefInitMatlab()
 
 The function used for reading the data from the image file:
 
-dataPrepare(prefs)
+* dataPrepare(prefs)
 
 Usage
 ============
