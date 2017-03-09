@@ -7,7 +7,8 @@ import sys
 if __name__ == '__main__':
 
     start1 = timeit.default_timer()
-    dataWhite1, dataProj, dataWhite2, dataDark = Stitching_Conv_TIFFtoHDF4.dataPrepare()
+    prefs = Stitching_Conv_TIFFtoHDF4.prefInitMatlab()
+    dataWhite1, dataProj, dataWhite2, dataDark = Stitching_Conv_TIFFtoHDF4.dataPrepare(prefs)
     stop1 = timeit.default_timer()
     print("end read data", (stop1 - start1))
 
@@ -42,17 +43,17 @@ if __name__ == '__main__':
         stop2 = timeit.default_timer()
         print("end normalize", (stop2 - start2))
 
-        start3 = timeit.default_timer()
-        # # Find rotation center.
-        rot_center = tomopy.find_center(proj, theta, emission=False, ind=0, init=1024, tol=0.5)
-        stop3 = timeit.default_timer()
-        print("end find_center", (stop3 - start3))
-
+        # start3 = timeit.default_timer()
+        # # # Find rotation center.
+        # rot_center = tomopy.find_center(proj, theta, ind=0, init=1024, tol=0.5)
+        # stop3 = timeit.default_timer()
+        # print("end find_center", (stop3 - start3))
+        rot_center = 840
         #
         # # Reconstruct object using Gridrec algorithm.
 
         start4 = timeit.default_timer()
-        rec = tomopy.recon(proj, theta, center=rot_center, algorithm='gridrec', emission=False)
+        rec = tomopy.recon(proj, theta, center=rot_center, algorithm='gridrec')
 
         stop4 = timeit.default_timer()
         print("end recon", (stop4 - start4))

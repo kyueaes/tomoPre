@@ -27,7 +27,7 @@ def child(i, procs, step, totalimage, prefs, kind, j, dataAve, monitor, nOut):
         dataAve[iavg] = imarray[(prefs['ROIy'][j][0]-1):prefs['ROIy'][j][-1] , (prefs['ROIx'][j][0]-1):prefs['ROIx'][j][-1]] # corp the array
         # if prefs['slits']['shouldCorr']: #comment out for this momoent, if need corr, need to initialize in the initialize script
         # dataAve[iavg] = slitposcorr(dataAve[iavg], prefs, j, kind, iavg)
-        print iavg
+        # print iavg
         if prefs['vis']['intMonitor']:
             _, _, _, aveint = Transform.preprocess(dataAve[iavg], prefs, j)
             monitor[iavg][j] = array('d', [aveint, prefs[kind]['Num'][j][iavg], nOut])

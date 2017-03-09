@@ -10,6 +10,7 @@ import avgTransform
 import projTransform
 import matReader
 import Stitching_InitConv_TIFFtoHDF4_single
+import Stitching_InitConv_TIFFtoHDF4
 
 def prefListToArrayD(prefList):
     if isinstance(prefList, list):
@@ -45,8 +46,7 @@ def prefIntToListI(prefList):
         prefList = prefList
     return  prefList
 
-
-def dataPrepare():
+def prefInitMatlab():
     f = matReader.loadmat('test.mat')
     prefs = f['prefs']
 
@@ -117,12 +117,20 @@ def dataPrepare():
 
     prefs['projection']['Prefix'] = [str(prefs['projection']['Prefix'])]
 
+    return prefs
 
+def prefInitSinglePy():
+    prefs = dict()
+    prefs = Stitching_InitConv_TIFFtoHDF4_single.initPyPref(prefs)
+    return prefs
 
-    # prefs = dict()
-    # prefs = Stitching_InitConv_TIFFtoHDF4_single.initPyPref(prefs)
+def prefInitPy():
+    prefs = dict()
+    prefs = Stitching_InitConv_TIFFtoHDF4.initPyPref(prefs)
+    return prefs
 
-    fileID = '/local/kyue/test/txt'
+def dataPrepare(prefs):
+    fileID = '/local/kyue/test/txt' # change the fileId here
     monitor=[]
     nOut = 0; moncnt = 0;
 
